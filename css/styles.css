@@ -37,28 +37,47 @@ input {
 .container {
   display: flex;
   height: 100vh;
+  min-width: 1110px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
 }
 .left-side-container {
   width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .overlay {
 }
 .logo-icon {
   fill: #ffcc34;
+  position: absolute;
+  top: 28px;
+  left: 28px;
 }
 .company-text-wrap {
+  text-align: center;
 }
 .company-name-title {
   font-family: "Playfair Display", serif;
   color: #ffcc34;
+  margin-bottom: 16px;
+  font-size: 40px;
 }
+
 .company-description-text {
   color: #ffffff;
 }
 .rigt-side-container {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .signin-section-wrap {
+  display: flex;
+  flex-direction: column;
 }
 .welcome-text {
   font-family: "Playfair Display", serif;
@@ -87,10 +106,13 @@ input {
   background-color: #556b2f80;
   border-radius: 3px;
   margin-top: 12px;
+  margin-bottom: 28px;
 }
 .show-password {
 }
 .form-checkbox {
+  margin-top: 40px;
+  margin-bottom: 52px;
 }
 
 .btns {
@@ -98,11 +120,17 @@ input {
   justify-content: space-between;
 }
 
-.signin-btn {
-}
 .btn {
   background-color: #ffcc34;
   font-family: "Playfair Display", serif;
+  border: 1px solid #556b2f80;
+  border-radius: 4px;
+  height: 52px;
+  font-size: 14px;
 }
+
+.signin-btn {
+}
+
 .google-signin {
 }
