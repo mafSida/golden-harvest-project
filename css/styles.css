@@ -1,7 +1,7 @@
 body {
   font-family: "Raleway", sans-serif;
   box-sizing: border-box;
-  background: #f5f5dc;
+  background: #f0f0e8;
   color: #333333;
   margin: 0;
   display: flex;
@@ -35,20 +35,42 @@ input {
 }
 
 .container {
+  position: relative;
   display: flex;
   height: 100vh;
-  min-width: 1110px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
+  width: 100vw;
 }
 .left-side-container {
-  width: 50%;
+  flex: 1;
+  position: relative;
+  background-color: #434e31;
+  clip-path: ellipse(100% 100% at 0% 50%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.left-side-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 592px; /* Фіксована ширина */
+  height: 592px; /* Фіксована висота */
+  transform: translate(-50%, -50%); /* Центрування зображення */
+  background-image: url("/img/background-picture.webp");
+  background-size: contain; /* Масштабування зображення, щоб воно повністю вписалось */
+  background-repeat: no-repeat; /* Зображення не повторюється */
+  background-position: center;
+  opacity: 0.5; /* Прозорість зображення */
+  z-index: 0; /* Зображення позаду тексту */
+}
+
 .overlay {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
 }
 .logo-icon {
   fill: #ffcc34;
@@ -70,10 +92,11 @@ input {
   color: #ffffff;
 }
 .rigt-side-container {
-  width: 50%;
+  flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 .signin-section-wrap {
   display: flex;
